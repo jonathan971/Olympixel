@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_10"
+type="Resource"
+uid="uid://blarrcwqvomrb"
+path="res://.godot/imported/bat.dialogue-d3fc88491ab2dbfa36d651d0ef8e0ed5.tres"
+
+[deps]
+
+source_file="res://dialogue/bat.dialogue"
+dest_files=["res://.godot/imported/bat.dialogue-d3fc88491ab2dbfa36d651d0ef8e0ed5.tres"]
+
+[params]
+
+defaults=true
