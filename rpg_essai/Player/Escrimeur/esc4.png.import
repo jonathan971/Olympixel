@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp7q4lsqhgdkt"
-path="res://.godot/imported/escrimeur.png-003ade4b7c9923ab665bc7215f2a9347.ctex"
+uid="uid://ul1mlfs0d0m3"
+path="res://.godot/imported/esc4.png-ef34e9f695a431e4494fbf938b98515f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/escrimeur.png"
-dest_files=["res://.godot/imported/escrimeur.png-003ade4b7c9923ab665bc7215f2a9347.ctex"]
+source_file="res://Player/Escrimeur/esc4.png"
+dest_files=["res://.godot/imported/esc4.png-ef34e9f695a431e4494fbf938b98515f.ctex"]
 
 [params]
 
