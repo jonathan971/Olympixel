@@ -5,8 +5,9 @@ Bat : Hi Renard !
 	Bat : Do you want to play with me ?
 	- Yes
 		Bat : Great ! Let's have some fun.
+		set get_tree().change_scene_to_file("res://World2/world2.tscn")
 	- No
-		Bat : Okay, well .. goodbye 
+		Bat: Goodbye
 		=> END
 - Goodbye => END
 
