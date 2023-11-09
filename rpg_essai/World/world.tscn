@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ch5fehu287kdp"]
+[gd_scene load_steps=11 format=3 uid="uid://ch5fehu287kdp"]
 
 [ext_resource type="Script" path="res://World/world.gd" id="1_oxskg"]
 [ext_resource type="PackedScene" uid="uid://ct6glqmmim8gg" path="res://Player/player.tscn" id="2_elfh3"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bfqm0owjb5455" path="res://dialogue/actionable.tscn" id="4_wlnem"]
 [ext_resource type="Texture2D" uid="uid://dn4dbv1cjvtg8" path="res://Map/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png" id="5_31b1x"]
 [ext_resource type="Resource" uid="uid://blarrcwqvomrb" path="res://dialogue/bat.dialogue" id="5_wfuib"]
+[ext_resource type="AudioStream" uid="uid://tsd8ri2korei" path="res://Music and Sounds/background.mp3" id="7_b2ayo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3oh05"]
 radius = 11.3137
@@ -1555,3 +1556,4 @@ layer_2/z_index = 10
 layer_2/tile_data = PackedInt32Array(196609, 0, 6, 196610, 65536, 6, 655396, 131072, 6, 458788, 131072, 6, 262180, 131072, 6, 65572, 131072, 6, 458757, 1048576, 8, 458759, 1048576, 8, 458761, 1048576, 8, 458763, 1048576, 8, 458764, 1179648, 8, 458765, 1245184, 8, 458766, 1310720, 8, 589829, 1179648, 8, 589830, 1245184, 8, 589831, 1310720, 8, 589826, 1179648, 8, 589827, 1245184, 8, 589828, 1310720, 8, 524304, 1048576, 8, 524307, 1048576, 8, 786450, 1048576, 8, 786448, 1048576, 8, 786446, 1048576, 8, 720908, 1048576, 8, 720906, 1048576, 8)
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_b2ayo")
