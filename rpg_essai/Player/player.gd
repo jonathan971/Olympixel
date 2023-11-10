@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
 const ACCELERATION = 500
-const MAX_SPEED = 80
+const MAX_SPEED = 96
 const ROLL_SPEED = 120
 const FRICTION = 600
+const JUMP_POWER = -192
+const GRAVITY = 32
 
 enum{
 	MOVE,
@@ -32,7 +34,6 @@ func _physics_process(delta):
 		
 		ATTACK:
 			attack_state(delta)
-		
 
 
 func move_state(delta):
@@ -63,7 +64,7 @@ func move_state(delta):
 	if Input.is_action_just_pressed("roll"):
 		state = ROLL
 	
-	if Input.is_action_just_pressed("attack"):
+	elif Input.is_action_just_pressed("attack"):
 		state = ATTACK
 
 func roll_state(delta):

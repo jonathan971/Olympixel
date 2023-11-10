@@ -662,7 +662,7 @@ states/idle/position = Vector2(481, 178)
 states/roll/node = SubResource("AnimationNodeBlendSpace2D_ptjt3")
 states/roll/position = Vector2(481, 62)
 states/run/node = SubResource("AnimationNodeBlendSpace2D_mqtin")
-states/run/position = Vector2(666, 177)
+states/run/position = Vector2(666, 176)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_sybv7"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_v5o14"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_8hfcg"), "run", "End", SubResource("AnimationNodeStateMachineTransition_6hfgn"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_nigbp"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_hu1nc"), "roll", "idle", SubResource("AnimationNodeStateMachineTransition_7e5b3"), "idle", "roll", SubResource("AnimationNodeStateMachineTransition_7qefr")]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_28q7i"]

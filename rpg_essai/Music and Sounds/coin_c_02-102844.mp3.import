@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bc300hqyrhrot"
+path="res://.godot/imported/coin_c_02-102844.mp3-9f22d90576dd76a3c0812ca9c1ed8658.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/coin_c_02-102844.mp3"
+dest_files=["res://.godot/imported/coin_c_02-102844.mp3-9f22d90576dd76a3c0812ca9c1ed8658.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
