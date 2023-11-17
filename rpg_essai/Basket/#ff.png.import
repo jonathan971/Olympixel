@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4e14tiiglal6"
-path="res://.godot/imported/Piste.png-a216cc293fbf2deddccb419b8815acf6.ctex"
+uid="uid://mmtgkrs5bvk8"
+path="res://.godot/imported/#ff.png-174dd14886f2e560958158b2dce971b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Piste.png"
-dest_files=["res://.godot/imported/Piste.png-a216cc293fbf2deddccb419b8815acf6.ctex"]
+source_file="res://Basket/#ff.png"
+dest_files=["res://.godot/imported/#ff.png-174dd14886f2e560958158b2dce971b4.ctex"]
 
 [params]
 
