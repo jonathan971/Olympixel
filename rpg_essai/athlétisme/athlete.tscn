@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ka2ladt3w6ey"]
 
-[ext_resource type="Script" path="res://World2/athlete.gd" id="1_5vu7n"]
-[ext_resource type="Texture2D" uid="uid://dy6iytqsmsbje" path="res://Player/Player.png" id="2_6qitl"]
+[ext_resource type="Script" path="res://athlétisme/athlete.gd" id="1_f0beq"]
+[ext_resource type="Texture2D" uid="uid://dy6iytqsmsbje" path="res://Player/Player.png" id="2_7f3ps"]
 
 [sub_resource type="Animation" id="Animation_6qvsq"]
 length = 0.001
@@ -81,10 +81,10 @@ radius = 6.0
 height = 22.0
 
 [node name="athlete" type="CharacterBody2D"]
-script = ExtResource("1_5vu7n")
+script = ExtResource("1_f0beq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_6qitl")
+texture = ExtResource("2_7f3ps")
 hframes = 60
 frame = 5
 

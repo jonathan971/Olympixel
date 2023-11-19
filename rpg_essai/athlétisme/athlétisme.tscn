@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c3qiby3sa11hd"]
 
-[ext_resource type="PackedScene" uid="uid://ka2ladt3w6ey" path="res://athlete.tscn" id="1_73rk8"]
-[ext_resource type="Script" path="res://World2/world2.gd" id="1_x2041"]
+[ext_resource type="PackedScene" uid="uid://ka2ladt3w6ey" path="res://athlétisme/athlete.tscn" id="1_73rk8"]
+[ext_resource type="Script" path="res://athlétisme/athlétisme.gd" id="1_x2041"]
 [ext_resource type="AudioStream" uid="uid://jgcotv5wuycy" path="res://Music and Sounds/cartoon-jump-6462.mp3" id="2_yctjn"]
 [ext_resource type="Texture2D" uid="uid://dn4dbv1cjvtg8" path="res://Map/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png" id="3_l5wt2"]
 [ext_resource type="AudioStream" uid="uid://dxicop7fixeme" path="res://Music and Sounds/athle.mp3" id="5_4lt13"]
@@ -1493,7 +1493,7 @@ use_texture_padding = false
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fu73g")
 
-[node name="world2" type="Node2D"]
+[node name="athlétisme" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(0, 2)
 script = ExtResource("1_x2041")

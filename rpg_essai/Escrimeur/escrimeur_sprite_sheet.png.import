@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6edlb5303a82"
-path="res://.godot/imported/CliffTileset.png-e4c592d9e8237a7cd716dda1eff85eda.ctex"
+uid="uid://bfxwt1std640w"
+path="res://.godot/imported/escrimeur_sprite_sheet.png-b9042655405e96ab43c9ffae2aa8c452.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World2/CliffTileset.png"
-dest_files=["res://.godot/imported/CliffTileset.png-e4c592d9e8237a7cd716dda1eff85eda.ctex"]
+source_file="res://Escrimeur/escrimeur_sprite_sheet.png"
+dest_files=["res://.godot/imported/escrimeur_sprite_sheet.png-b9042655405e96ab43c9ffae2aa8c452.ctex"]
 
 [params]
 

@@ -2,24 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be2kyj0ywirap"
-path.s3tc="res://.godot/imported/Bush.png-94ff59330e1d62e03ea297037415fdc3.s3tc.ctex"
+uid="uid://clkjusg613qng"
+path="res://.godot/imported/Godot-Map.png-0023e7354ef914f8f72fbe56bfac63f0.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://World2/Bush.png"
-dest_files=["res://.godot/imported/Bush.png-94ff59330e1d62e03ea297037415fdc3.s3tc.ctex"]
+source_file="res://athlétisme/Godot-Map.png"
+dest_files=["res://.godot/imported/Godot-Map.png-0023e7354ef914f8f72fbe56bfac63f0.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_compression=0
+compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
