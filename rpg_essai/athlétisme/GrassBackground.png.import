@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drtpjbexcm1ea"
-path="res://.godot/imported/GrassBackground.png-39f0bf3741937c9bdc96fa37fa902cf1.ctex"
+path="res://.godot/imported/GrassBackground.png-e5541b822b481745b15bd6eab5a30c83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World2/GrassBackground.png"
-dest_files=["res://.godot/imported/GrassBackground.png-39f0bf3741937c9bdc96fa37fa902cf1.ctex"]
+source_file="res://athlétisme/GrassBackground.png"
+dest_files=["res://.godot/imported/GrassBackground.png-e5541b822b481745b15bd6eab5a30c83.ctex"]
 
 [params]
 

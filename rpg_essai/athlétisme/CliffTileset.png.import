@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6nb6ncoccl84"
-path="res://.godot/imported/DirtTileset.png-8ac59c7c5f37654cdb7d24c0aa708478.ctex"
+uid="uid://b6edlb5303a82"
+path="res://.godot/imported/CliffTileset.png-45d8cf8063eb4608d36d59eae1dccabe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World2/DirtTileset.png"
-dest_files=["res://.godot/imported/DirtTileset.png-8ac59c7c5f37654cdb7d24c0aa708478.ctex"]
+source_file="res://athlétisme/CliffTileset.png"
+dest_files=["res://.godot/imported/CliffTileset.png-45d8cf8063eb4608d36d59eae1dccabe.ctex"]
 
 [params]
 

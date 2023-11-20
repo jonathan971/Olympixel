@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drwkbflbwqkck"
-path="res://.godot/imported/Tree.png-7080a466973af6cc24effbd344404f8a.ctex"
+uid="uid://d4ldb1noge0gm"
+path="res://.godot/imported/Piste.png-d3e6a2e31522c015240f7a502ef99cad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World2/Tree.png"
-dest_files=["res://.godot/imported/Tree.png-7080a466973af6cc24effbd344404f8a.ctex"]
+source_file="res://athlétisme/Piste.png"
+dest_files=["res://.godot/imported/Piste.png-d3e6a2e31522c015240f7a502ef99cad.ctex"]
 
 [params]
 

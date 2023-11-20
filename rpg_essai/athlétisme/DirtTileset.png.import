@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5jrpc1ebfbxt"
-path="res://.godot/imported/Grass.png-51489b9600e0b765fbb2d6099a840113.ctex"
+uid="uid://b6nb6ncoccl84"
+path="res://.godot/imported/DirtTileset.png-b2bff4978042696185a31f14e8a030fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World2/Grass.png"
-dest_files=["res://.godot/imported/Grass.png-51489b9600e0b765fbb2d6099a840113.ctex"]
+source_file="res://athlétisme/DirtTileset.png"
+dest_files=["res://.godot/imported/DirtTileset.png-b2bff4978042696185a31f14e8a030fd.ctex"]
 
 [params]
 

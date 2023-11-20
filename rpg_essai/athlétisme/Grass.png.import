@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x2w7djg3k6xn"
-path="res://.godot/imported/escrime.png-7241eafd4518f926ebac0de4b29fb728.ctex"
+uid="uid://5jrpc1ebfbxt"
+path="res://.godot/imported/Grass.png-12b18d3b44456ff21f1c2a113da8c78a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/escrime.png"
-dest_files=["res://.godot/imported/escrime.png-7241eafd4518f926ebac0de4b29fb728.ctex"]
+source_file="res://athlétisme/Grass.png"
+dest_files=["res://.godot/imported/Grass.png-12b18d3b44456ff21f1c2a113da8c78a.ctex"]
 
 [params]
 
