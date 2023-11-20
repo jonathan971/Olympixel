@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://di1bp3qwm36mt"
-path="res://.godot/imported/PixelifySans-VariableFont_wght.ttf-c45f0de12687965509048465f52283ea.fontdata"
+uid="uid://dn4xs5ncttvse"
+path="res://.godot/imported/Horizon.otf-dd645daa4c868578ace3dcbfef20ff18.fontdata"
 
 [deps]
 
-source_file="res://Menu/PixelifySans-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/PixelifySans-VariableFont_wght.ttf-c45f0de12687965509048465f52283ea.fontdata"]
+source_file="res://Menu/Horizon.otf"
+dest_files=["res://.godot/imported/Horizon.otf-dd645daa4c868578ace3dcbfef20ff18.fontdata"]
 
 [params]
 
