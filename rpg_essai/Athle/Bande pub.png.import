@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcwbt7n4e7dri"
-path="res://.godot/imported/#Haie.png-1bd477c7f5801db5b7dc2f8c83392201.ctex"
+uid="uid://bervnr7oywf7f"
+path="res://.godot/imported/Bande pub.png-c85526321f5a053b28178e1734d79d49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Athle/#Haie.png"
-dest_files=["res://.godot/imported/#Haie.png-1bd477c7f5801db5b7dc2f8c83392201.ctex"]
+source_file="res://Athle/Bande pub.png"
+dest_files=["res://.godot/imported/Bande pub.png-c85526321f5a053b28178e1734d79d49.ctex"]
 
 [params]
 

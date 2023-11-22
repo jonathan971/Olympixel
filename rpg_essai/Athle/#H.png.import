@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkb77d6gipolx"
-path="res://.godot/imported/Sans titre-1.png-d2323684e94781a90f8ebe1b10c1b125.ctex"
+uid="uid://btnkmr350rhjx"
+path="res://.godot/imported/#H.png-e7459667854a4d065ed2747834eef787.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Athle/Sans titre-1.png"
-dest_files=["res://.godot/imported/Sans titre-1.png-d2323684e94781a90f8ebe1b10c1b125.ctex"]
+source_file="res://Athle/#H.png"
+dest_files=["res://.godot/imported/#H.png-e7459667854a4d065ed2747834eef787.ctex"]
 
 [params]
 

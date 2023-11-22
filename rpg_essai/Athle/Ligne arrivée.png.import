@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cofl2wftjpx0f"
-path="res://.godot/imported/Sans titre-22.png-8e07c21404fdd279bbbea4e34144b699.ctex"
+uid="uid://c1v6fcr4r7imp"
+path="res://.godot/imported/Ligne arrivée.png-00275269f2c9d8228b90ff46a9475efc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Athle/Sans titre-22.png"
-dest_files=["res://.godot/imported/Sans titre-22.png-8e07c21404fdd279bbbea4e34144b699.ctex"]
+source_file="res://Athle/Ligne arrivée.png"
+dest_files=["res://.godot/imported/Ligne arrivée.png-00275269f2c9d8228b90ff46a9475efc.ctex"]
 
 [params]
 

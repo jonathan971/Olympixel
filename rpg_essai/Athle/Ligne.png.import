@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgj733203esab"
-path="res://.godot/imported/#2.png-8745694cf9ded9380ec0e1182d8397d9.ctex"
+uid="uid://cenuqmkvg4ch6"
+path="res://.godot/imported/Ligne.png-e49225c28e14935b30ff995507d7373b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Athle/#2.png"
-dest_files=["res://.godot/imported/#2.png-8745694cf9ded9380ec0e1182d8397d9.ctex"]
+source_file="res://Athle/Ligne.png"
+dest_files=["res://.godot/imported/Ligne.png-e49225c28e14935b30ff995507d7373b.ctex"]
 
 [params]
 

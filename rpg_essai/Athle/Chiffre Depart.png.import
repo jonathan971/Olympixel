@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs3lvduudqewq"
-path="res://.godot/imported/#1.png-c142cfc17bd33c5dab0af9dd9bc5a791.ctex"
+uid="uid://wtsy1vl10q66"
+path="res://.godot/imported/Chiffre Depart.png-9f51623206376ed185767d9c5be54ddc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Athle/#1.png"
-dest_files=["res://.godot/imported/#1.png-c142cfc17bd33c5dab0af9dd9bc5a791.ctex"]
+source_file="res://Athle/Chiffre Depart.png"
+dest_files=["res://.godot/imported/Chiffre Depart.png-9f51623206376ed185767d9c5be54ddc.ctex"]
 
 [params]
 

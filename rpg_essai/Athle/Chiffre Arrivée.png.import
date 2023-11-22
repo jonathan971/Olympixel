@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqhqoeaoefabh"
-path="res://.godot/imported/#3.png-a430f04d992a748e0bea64730c4e2203.ctex"
+uid="uid://m3nylxkikrv"
+path="res://.godot/imported/Chiffre Arrivée.png-4c430b9c0ef5aae0b669837c1277ac5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Athle/#3.png"
-dest_files=["res://.godot/imported/#3.png-a430f04d992a748e0bea64730c4e2203.ctex"]
+source_file="res://Athle/Chiffre Arrivée.png"
+dest_files=["res://.godot/imported/Chiffre Arrivée.png-4c430b9c0ef5aae0b669837c1277ac5b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgle5qvjv1ka4"
-path="res://.godot/imported/Sans titre-2.png-fbb700a0975395a229194cddb99d8380.ctex"
+uid="uid://mnmgxf4sj44l"
+path="res://.godot/imported/Ligne depart.png-ffc582bdb15f919faa8e70a5d0e0501c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Athle/Sans titre-2.png"
-dest_files=["res://.godot/imported/Sans titre-2.png-fbb700a0975395a229194cddb99d8380.ctex"]
+source_file="res://Athle/Ligne depart.png"
+dest_files=["res://.godot/imported/Ligne depart.png-ffc582bdb15f919faa8e70a5d0e0501c.ctex"]
 
 [params]
 
