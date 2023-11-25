@@ -1,8 +1,10 @@
-[gd_scene load_steps=32 format=3 uid="uid://0wr4a22hgai"]
+[gd_scene load_steps=40 format=3 uid="uid://0wr4a22hgai"]
 
 [ext_resource type="Script" path="res://Escrimeur/escrimeur.gd" id="1_s2yfs"]
 [ext_resource type="Texture2D" uid="uid://bfxwt1std640w" path="res://Escrimeur/escrimeur_sprite_sheet.png" id="2_xesfo"]
-[ext_resource type="Texture2D" uid="uid://bd0lqlw5k260t" path="res://World/escrime.png" id="3_1jh2a"]
+[ext_resource type="Texture2D" uid="uid://x2w7djg3k6xn" path="res://World/escrime.png" id="3_1jh2a"]
+[ext_resource type="Script" path="res://Escrimeur/escrimeur2.gd" id="3_a1jct"]
+[ext_resource type="PackedScene" uid="uid://ndcka5nlae8q" path="res://Escrimeur/detection_escrimeur_zone.tscn" id="4_wi756"]
 
 [sub_resource type="Animation" id="Animation_rdbq1"]
 length = 0.001
@@ -224,9 +226,33 @@ states/parade/node = SubResource("AnimationNodeBlendSpace2D_ac1rh")
 states/parade/position = Vector2(426, 209)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_b7jug"), "idle", "parade", SubResource("AnimationNodeStateMachineTransition_76h57"), "parade", "idle", SubResource("AnimationNodeStateMachineTransition_4i4u4"), "idle", "move", SubResource("AnimationNodeStateMachineTransition_0e6i0"), "move", "idle", SubResource("AnimationNodeStateMachineTransition_21qlc"), "move", "End", SubResource("AnimationNodeStateMachineTransition_ju3q0"), "attaque", "idle", SubResource("AnimationNodeStateMachineTransition_73bu4"), "idle", "attaque", SubResource("AnimationNodeStateMachineTransition_uggvb")]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tibk7"]
+radius = 13.0
+height = 58.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_44jjv"]
+radius = 34.1321
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gbbsk"]
+a = Vector2(10, -8)
+b = Vector2(-1, 7)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tpdh6"]
+a = Vector2(-1, -5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_a0gsw"]
+a = Vector2(1, -5)
+b = Vector2(-2, 12)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_pw4q3"]
+a = Vector2(3, -5)
+b = Vector2(8, 11)
+
 [node name="escrime" type="Node2D"]
 
 [node name="escrimeur" type="CharacterBody2D" parent="."]
+collision_layer = 5
+collision_mask = 5
 script = ExtResource("1_s2yfs")
 
 [node name="Sprite2D" type="Sprite2D" parent="escrimeur"]
@@ -250,11 +276,82 @@ parameters/idle/blend_position = Vector2(0, 0)
 parameters/move/blend_position = Vector2(0, 0)
 parameters/parade/blend_position = Vector2(0, 0)
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="escrimeur"]
+position = Vector2(120, 114)
+shape = SubResource("CapsuleShape2D_tibk7")
+
+[node name="Camera2D" type="Camera2D" parent="escrimeur"]
+position = Vector2(140, 80)
+
+[node name="escrimeur2" type="CharacterBody2D" parent="."]
+position = Vector2(1, 0)
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("3_a1jct")
+
+[node name="Sprite2D" type="Sprite2D" parent="escrimeur2"]
+position = Vector2(241, 113)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_xesfo")
+flip_h = true
+hframes = 6
+vframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="escrimeur2"]
+libraries = {
+"": SubResource("AnimationLibrary_lska6")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="escrimeur2"]
+tree_root = SubResource("AnimationNodeStateMachine_gwfop")
+anim_player = NodePath("../AnimationPlayer")
+parameters/attaque/blend_position = Vector2(-0.218447, -0.100437)
+parameters/idle/blend_position = Vector2(0, 0)
+parameters/move/blend_position = Vector2(0, 0)
+parameters/parade/blend_position = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="escrimeur2"]
+position = Vector2(255, 113)
+shape = SubResource("CapsuleShape2D_tibk7")
+
+[node name="DetectionEscrimeurZone" parent="escrimeur2" instance=ExtResource("4_wi756")]
+
+[node name="CollisionShape2D" parent="escrimeur2/DetectionEscrimeurZone" index="0"]
+modulate = Color(1, 1, 1, 0.317647)
+position = Vector2(247, 111)
+shape = SubResource("CircleShape2D_44jjv")
+
 [node name="TextureRect" type="TextureRect" parent="."]
 show_behind_parent = true
-offset_left = -26.0
-offset_top = -35.0
-offset_right = 386.0
-offset_bottom = 179.0
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 392.0
+offset_bottom = 177.0
 texture = ExtResource("3_1jh2a")
 expand_mode = 1
+
+[node name="collisionsEscr1" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="collisionsEscr1"]
+position = Vector2(11, 136)
+shape = SubResource("SegmentShape2D_gbbsk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisionsEscr1"]
+position = Vector2(241, 133)
+shape = SubResource("SegmentShape2D_tpdh6")
+
+[node name="collisionsEscr2" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisionsEscr2"]
+position = Vector2(141, 132)
+shape = SubResource("SegmentShape2D_a0gsw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="collisionsEscr2"]
+position = Vector2(352, 133)
+shape = SubResource("SegmentShape2D_pw4q3")
+
+[editable path="escrimeur2/DetectionEscrimeurZone"]

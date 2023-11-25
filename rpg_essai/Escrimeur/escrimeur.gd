@@ -12,6 +12,7 @@ enum{
 }
 
 var state = MOVE
+var attaque = false
 
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
@@ -60,6 +61,7 @@ func move_state(delta):
 	
 	elif Input.is_action_just_pressed("attaque"):
 		state = ATTAQUE
+		attaque = true
 
 func parade_state(delta):
 	velocity = Vector2.ZERO
@@ -68,6 +70,7 @@ func parade_state(delta):
 func attaque_state(delta):
 	velocity = Vector2.ZERO
 	animationState.travel("attaque")
+	attaque = false
 
 func move():
 	move_and_slide()
