@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1eiol7ec4g4o"
-path="res://.godot/imported/CliffTileset.png-45d8cf8063eb4608d36d59eae1dccabe.ctex"
+uid="uid://dycxyunxcybx5"
+path="res://.godot/imported/perso_second_3.png-14ac6ef264afc95498018dc2cf005ec7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://athlétisme/CliffTileset.png"
-dest_files=["res://.godot/imported/CliffTileset.png-45d8cf8063eb4608d36d59eae1dccabe.ctex"]
+source_file="res://Player/Secondaires/perso_second_3.png"
+dest_files=["res://.godot/imported/perso_second_3.png-14ac6ef264afc95498018dc2cf005ec7.ctex"]
 
 [params]
 

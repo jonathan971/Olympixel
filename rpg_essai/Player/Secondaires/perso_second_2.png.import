@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daruyps32f7lo"
-path="res://.godot/imported/Piste.png-d3e6a2e31522c015240f7a502ef99cad.ctex"
+uid="uid://c032gk8ahcpjn"
+path="res://.godot/imported/perso_second_2.png-bd4aa39e7bcb5b85444fd1fd068ceab1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://athlétisme/Piste.png"
-dest_files=["res://.godot/imported/Piste.png-d3e6a2e31522c015240f7a502ef99cad.ctex"]
+source_file="res://Player/Secondaires/perso_second_2.png"
+dest_files=["res://.godot/imported/perso_second_2.png-bd4aa39e7bcb5b85444fd1fd068ceab1.ctex"]
 
 [params]
 

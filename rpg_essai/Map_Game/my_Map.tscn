@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://bdr360uags7ud"]
+[gd_scene load_steps=3 format=3 uid="uid://bdr360uags7ud"]
+
+[ext_resource type="PackedScene" uid="uid://b2dk658qaoo4t" path="res://Map_Game/Map.tscn" id="1_impav"]
+[ext_resource type="PackedScene" uid="uid://c03xqs6idflpu" path="res://Player/Principal/Perso_principal.tscn" id="2_5bqy1"]
 
 [node name="my_Map" type="Node2D"]
+
+[node name="Map" parent="." instance=ExtResource("1_impav")]
+
+[node name="Perso_principal" parent="." instance=ExtResource("2_5bqy1")]
+position = Vector2(361, 128)

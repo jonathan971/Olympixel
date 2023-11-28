@@ -640,16 +640,16 @@ corner_radius_bottom_left = 5
 
 [node name="menu" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.354
+anchor_bottom = 0.28
+offset_right = 0.399998
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y48jo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(160, 90)
-scale = Vector2(0.338983, 0.238411)
+position = Vector2(449.5, 324)
+scale = Vector2(0.952331, 0.858278)
 sprite_frames = SubResource("SpriteFrames_dqy4o")
 animation = &"new_animation"
 frame = 22

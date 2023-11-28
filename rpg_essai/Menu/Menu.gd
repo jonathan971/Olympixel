@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_button_jouer_pressed():
-	get_tree().change_scene_to_file("res://World/world.tscn")
+	get_tree().change_scene_to_file("res://Map_Game/my_Map.tscn")
 
 
 func _on_button_quitter_pressed():

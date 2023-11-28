@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=3 uid="uid://dl61mfs3x4hyl"]
+[gd_scene load_steps=158 format=3 uid="uid://6lyqw7a5fl4e"]
 
 [ext_resource type="Script" path="res://Menu/menu.gd" id="1_y48jo"]
 [ext_resource type="Texture2D" uid="uid://dx81ma8jbwppg" path="res://Menu/image/1.png" id="2_rqp2r"]
@@ -640,16 +640,17 @@ corner_radius_bottom_left = 5
 
 [node name="menu" type="Control"]
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 1.002
+offset_right = -1.0
+offset_bottom = -0.300061
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y48jo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(160, 90)
-scale = Vector2(0.338983, 0.238411)
+position = Vector2(449.5, 324.5)
+scale = Vector2(0.95233, 0.859603)
 sprite_frames = SubResource("SpriteFrames_dqy4o")
 animation = &"new_animation"
 frame = 22

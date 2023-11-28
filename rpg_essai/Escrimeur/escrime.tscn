@@ -305,5 +305,5 @@ offset_top = -37.0
 offset_right = 392.0
 offset_bottom = 177.0
 texture = ExtResource("3_1jh2a")
-expand_mode = 1
+expand_mode = 2
 metadata/_edit_use_anchors_ = true
