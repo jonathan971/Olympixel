@@ -1,0 +1,140 @@
+[gd_scene load_steps=11 format=3 uid="uid://d1fala1vum8jy"]
+
+[ext_resource type="Script" path="res://Player/Sprinteur/runner.gd" id="1_bei1d"]
+[ext_resource type="Texture2D" uid="uid://b7tmed7l8toft" path="res://Player/Sprinteur/sprinteur_sprite_sheet.png" id="1_vg2vj"]
+[ext_resource type="FontFile" uid="uid://dn4xs5ncttvse" path="res://Menu/Horizon.otf" id="3_crga7"]
+[ext_resource type="Script" path="res://Player/Sprinteur/RichTextLabel.gd" id="4_d08t2"]
+
+[sub_resource type="Animation" id="Animation_cefj1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SprinteurSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ifgqa"]
+resource_name = "idle"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SprinteurSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ys2v1"]
+resource_name = "jump"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SprinteurSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10]
+}
+
+[sub_resource type="Animation" id="Animation_pj4ir"]
+resource_name = "run"
+length = 0.5
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SprinteurSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ivwje"]
+_data = {
+"RESET": SubResource("Animation_cefj1"),
+"idle": SubResource("Animation_ifgqa"),
+"jump": SubResource("Animation_ys2v1"),
+"run": SubResource("Animation_pj4ir")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h5eeu"]
+radius = 12.0
+height = 52.0
+
+[node name="Runner" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_bei1d")
+
+[node name="SprinteurSpriteSheet" type="Sprite2D" parent="."]
+position = Vector2(5, -57)
+scale = Vector2(0.551111, 0.551111)
+texture = ExtResource("1_vg2vj")
+hframes = 4
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ivwje")
+}
+
+[node name="Run" type="Node2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 28)
+shape = SubResource("CapsuleShape2D_h5eeu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-7, -136)
+limit_left = 0
+limit_right = 2287
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -126.0
+offset_top = -350.0
+offset_right = 126.0
+offset_bottom = -267.0
+color = Color(0, 0, 0, 0.721569)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = -38.0
+offset_right = 120.5
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_crga7")
+theme_override_font_sizes/normal_font_size = 50
+script = ExtResource("4_d08t2")
+
+[node name="Timer" type="Timer" parent="ColorRect2/RichTextLabel"]
