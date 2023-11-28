@@ -13,3 +13,9 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+#DS_Store
+.DS_Store
+
+# Exclude the project.godot file
+project.godot

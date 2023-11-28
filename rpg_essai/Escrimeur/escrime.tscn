@@ -329,29 +329,4 @@ offset_right = 392.0
 offset_bottom = 177.0
 texture = ExtResource("3_1jh2a")
 expand_mode = 1
-
-[node name="collisionsEscr1" type="StaticBody2D" parent="."]
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="collisionsEscr1"]
-position = Vector2(11, 136)
-shape = SubResource("SegmentShape2D_gbbsk")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="collisionsEscr1"]
-position = Vector2(241, 133)
-shape = SubResource("SegmentShape2D_tpdh6")
-
-[node name="collisionsEscr2" type="StaticBody2D" parent="."]
-collision_layer = 8
-collision_mask = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="collisionsEscr2"]
-position = Vector2(141, 132)
-shape = SubResource("SegmentShape2D_a0gsw")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="collisionsEscr2"]
-position = Vector2(352, 133)
-shape = SubResource("SegmentShape2D_pw4q3")
-
-[editable path="escrimeur2/DetectionEscrimeurZone"]
+metadata/_edit_use_anchors_ = true
