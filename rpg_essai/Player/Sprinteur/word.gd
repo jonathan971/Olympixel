@@ -11,7 +11,7 @@ func _ready():
 	timer.one_shot = true
 	add_child(timer)  # Ajoutez le Timer à la scène
 	timer.connect("timeout", Callable(self,"_on_Timer_timeout"))
-	label.text ="[center]À vos marques"
+	label.text ="[center]À vos marques[/center]"
 	#show_message("À vos marques")
 	timer.start()
 

@@ -263,7 +263,8 @@ position = Vector2(120, 114)
 shape = SubResource("CapsuleShape2D_tibk7")
 
 [node name="Camera2D" type="Camera2D" parent="escrimeur"]
-position = Vector2(140, 80)
+position = Vector2(187, 70)
+zoom = Vector2(2.19, 3.1)
 
 [node name="escrimeur2" type="CharacterBody2D" parent="."]
 position = Vector2(1, 0)
