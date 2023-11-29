@@ -640,17 +640,16 @@ corner_radius_bottom_left = 5
 
 [node name="credits" type="Control"]
 layout_mode = 3
-anchor_right = 0.357
-anchor_bottom = 0.278
-offset_right = -0.300021
-offset_bottom = 0.299982
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ufdku")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(160, 90)
-scale = Vector2(0.338983, 0.238411)
+position = Vector2(449.5, 324)
+scale = Vector2(0.952331, 0.858278)
 sprite_frames = SubResource("SpriteFrames_bb16i")
 animation = &"new_animation"
 script = ExtResource("153_ly7yh")
@@ -722,13 +721,13 @@ text = "Ce jeu a été réalisé par :
 
 [node name="Button_Retour" type="Button" parent="."]
 layout_mode = 0
-offset_left = 259.0
-offset_top = 157.0
-offset_right = 307.0
-offset_bottom = 170.0
+offset_left = 754.0
+offset_top = 575.0
+offset_right = 856.0
+offset_bottom = 609.0
 focus_mode = 0
 theme_override_fonts/font = ExtResource("154_i0vlo")
-theme_override_font_sizes/font_size = 7
+theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxFlat_0yqt2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_geciv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7x4bl")
