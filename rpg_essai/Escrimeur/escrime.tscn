@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://0wr4a22hgai"]
+[gd_scene load_steps=39 format=3 uid="uid://0wr4a22hgai"]
 
 [ext_resource type="Script" path="res://Escrimeur/escrimeur.gd" id="1_s2yfs"]
 [ext_resource type="Texture2D" uid="uid://bfxwt1std640w" path="res://Escrimeur/escrimeur_sprite_sheet.png" id="2_xesfo"]
@@ -230,6 +230,21 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 radius = 13.0
 height = 58.0
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fo1pv"]
+a = Vector2(0, -2)
+b = Vector2(1, 15)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_37scl"]
+a = Vector2(0, 9)
+b = Vector2(8, -8)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_n2u81"]
+a = Vector2(2, -7)
+b = Vector2(-1, 10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qxm3q"]
+a = Vector2(-1, -7)
+
 [node name="escrime" type="Node2D"]
 
 [node name="escrimeur" type="CharacterBody2D" parent="."]
@@ -308,3 +323,27 @@ offset_bottom = 177.0
 texture = ExtResource("3_1jh2a")
 expand_mode = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="collisionJoueur" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisionJoueur"]
+position = Vector2(241, 128)
+shape = SubResource("SegmentShape2D_fo1pv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="collisionJoueur"]
+position = Vector2(9, 137)
+shape = SubResource("SegmentShape2D_37scl")
+
+[node name="collisionAdversaire" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisionAdversaire"]
+position = Vector2(139, 133)
+shape = SubResource("SegmentShape2D_n2u81")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="collisionAdversaire"]
+position = Vector2(359, 130)
+shape = SubResource("SegmentShape2D_qxm3q")
