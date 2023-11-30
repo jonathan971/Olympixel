@@ -19,3 +19,6 @@ mono_crash.*.json
 
 # Exclude the project.godot file
 project.godot
+
+#import resources
+**/*.import
