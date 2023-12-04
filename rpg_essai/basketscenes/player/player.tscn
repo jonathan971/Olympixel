@@ -174,6 +174,7 @@ graph_offset = Vector2(-116.761, -21.8798)
 size = Vector2(47, 149)
 
 [node name="player" type="CharacterBody2D"]
+position = Vector2(0, -1)
 script = ExtResource("1_14giu")
 
 [node name="Sprite2Dplayer" type="Sprite2D" parent="."]

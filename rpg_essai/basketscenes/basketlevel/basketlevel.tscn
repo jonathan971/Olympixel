@@ -41,7 +41,7 @@ position = Vector2(915, 298)
 shape = SubResource("RectangleShape2D_u6lm3")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="sol"]
-position = Vector2(-10, 301.5)
+position = Vector2(-9, 297)
 shape = SubResource("RectangleShape2D_5kdk0")
 
 [node name="panier" type="Area2D" parent="." groups=["panier"]]

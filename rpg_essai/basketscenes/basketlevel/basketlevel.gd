@@ -44,8 +44,6 @@ func get_impulse_vector(angle,size):
 func _on_button_shoot_pressed():
 	
 	if (can_shoot == true):
-		
-	
 		get_node("ball").picked = false
 		get_node("ball").linear_velocity = Vector2(0, 0)
 		print("button pressed")
@@ -66,6 +64,5 @@ func _on_button_shoot_pressed():
 		var anim = get_node("player/AnimatedSprite2D")
 		anim.play("tirer")
 		can_shoot = false
-
 
 

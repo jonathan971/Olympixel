@@ -24,7 +24,7 @@ func _input(event):
 		apply_impulse(impulse,Vector2())
 		is_moving = true
 		print("ici")	
-						
+
 
 
 

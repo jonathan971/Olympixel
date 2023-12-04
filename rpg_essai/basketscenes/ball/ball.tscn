@@ -13,6 +13,7 @@ radius = 40.5669
 radius = 49.6908
 
 [node name="ball" type="RigidBody2D"]
+position = Vector2(2, 4)
 physics_material_override = SubResource("PhysicsMaterial_82kal")
 script = ExtResource("1_ot6w8")
 
