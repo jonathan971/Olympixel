@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6p3h2cjvei8v"
+path="res://.godot/imported/music_principale.mp3-6056bf8c1737e79567f9770cd6b4ad6f.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/music_principale.mp3"
+dest_files=["res://.godot/imported/music_principale.mp3-6056bf8c1737e79567f9770cd6b4ad6f.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
