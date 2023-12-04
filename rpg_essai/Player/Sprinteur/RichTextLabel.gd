@@ -23,7 +23,7 @@ func stop_timer():
 
 func _on_timer_timeout():
 	# Mettez à jour le texte pour afficher le temps écoulé avec un formatage correct
-	set_text("%02d:%02d:%03d" % [m, s, ms])
+	set_text("[center]%02d:%02d:%03d[/center]" % [m, s, ms])
 	pass
 	
 func _process(delta):

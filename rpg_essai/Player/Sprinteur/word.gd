@@ -19,7 +19,7 @@ var stage = 0  # Ajoutez une variable pour suivre l'étape de la séquence
 
 func _on_Timer_timeout():
 	if stage == 0:
-		label.text ="[center]Pret"
+		label.text ="[center]Pret[/center]"
 		stage += 1
 		timer.start()
 	elif stage == 1:
