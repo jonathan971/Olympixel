@@ -1,11 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdr360uags7ud"]
+[gd_scene load_steps=5 format=3 uid="uid://bdr360uags7ud"]
 
+[ext_resource type="Script" path="res://Map_Game/my_Map.gd" id="1_d3wqs"]
 [ext_resource type="PackedScene" uid="uid://b2dk658qaoo4t" path="res://Map_Game/Map.tscn" id="1_impav"]
 [ext_resource type="PackedScene" uid="uid://c03xqs6idflpu" path="res://Player/Principal/Perso_principal.tscn" id="2_5bqy1"]
+[ext_resource type="PackedScene" uid="uid://cwnffnx8uc3ew" path="res://Menu/PauseMenu.tscn" id="3_w87i4"]
 
 [node name="my_Map" type="Node2D"]
+script = ExtResource("1_d3wqs")
 
 [node name="Map" parent="." instance=ExtResource("1_impav")]
 
 [node name="Perso_principal" parent="." instance=ExtResource("2_5bqy1")]
 position = Vector2(361, 128)
+
+[node name="PauseMenu" parent="Perso_principal" instance=ExtResource("3_w87i4")]
+visible = false
+offset_left = 5.0
+offset_top = 17.0
+offset_right = 5.0
+offset_bottom = 17.0

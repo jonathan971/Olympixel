@@ -5,6 +5,24 @@ var y
 var count = 0
 var can_shoot = true
 
+@onready var pause_menu = $CanvasLayer/PauseMenu
+var paused = false
+
+func pauseMenu():
+	if paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
+	else :
+		pause_menu.show()
+		Engine.time_scale = 0
+	
+	paused = !paused
+	
+func stopMenu():
+	if paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
+
 func _ready():
 	var initial_x = $ball.position.x
 	var initial_y = $ball.position.y
@@ -17,6 +35,7 @@ func _ready():
 	
 
 func _process(delta):
+
 	x = $ball.position.x
 	y = $ball.position.y
 
@@ -29,9 +48,11 @@ func _process(delta):
 		get_node("ball").picked = true
 		count = 0
 		can_shoot = true
+	
+	if  Input.is_action_just_pressed("pause"):
+		pauseMenu()
 
-		
- 
+
 
 func get_impulse_vector(angle,size):
 	angle = angle * PI / 180
@@ -64,5 +85,9 @@ func _on_button_shoot_pressed():
 		var anim = get_node("player/AnimatedSprite2D")
 		anim.play("tirer")
 		can_shoot = false
+
+
+
+
 
 

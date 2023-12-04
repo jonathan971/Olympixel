@@ -717,7 +717,7 @@ size_flags_vertical = 3
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 
-[node name="Button_Aide" type="Button" parent="AnimatedSprite2D/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
+[node name="Button_Histoire" type="Button" parent="AnimatedSprite2D/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
 layout_mode = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("153_8d3to")
@@ -725,7 +725,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_4v0lj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cn8ij")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_uland")
-text = "Aide"
+text = "Hiistoiire"
 
 [node name="MarginContainer3" type="MarginContainer" parent="AnimatedSprite2D/MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -743,4 +743,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cn8ij")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_uland")
 text = "Retour"
 
+[connection signal="pressed" from="AnimatedSprite2D/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Button_Commentjouer" to="." method="_on_button_commentjouer_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Button_Histoire" to="." method="_on_button_histoire_pressed"]
 [connection signal="pressed" from="AnimatedSprite2D/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/Button_Retour" to="." method="_on_button_retour_pressed"]

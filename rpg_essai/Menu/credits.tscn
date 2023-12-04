@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=3 uid="uid://b1owwg5n8ytrk"]
+[gd_scene load_steps=159 format=3 uid="uid://b1owwg5n8ytrk"]
 
 [ext_resource type="Script" path="res://Menu/credits.gd" id="1_ufdku"]
 [ext_resource type="Texture2D" uid="uid://dx81ma8jbwppg" path="res://Menu/image/1.png" id="3_ryq2y"]
@@ -617,6 +617,13 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_617xu"]
+bg_color = Color(3.00817e-08, 0.248426, 0.161364, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0yqt2"]
 bg_color = Color(0, 0, 0, 0.392157)
 corner_radius_top_left = 5
@@ -640,6 +647,7 @@ corner_radius_bottom_left = 5
 
 [node name="credits" type="Control"]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -2.0
@@ -669,55 +677,76 @@ grow_vertical = 2
 color = Color(0.458824, 0.67451, 0.192157, 0.388235)
 
 [node name="MarginContainer" type="MarginContainer" parent="AnimatedSprite2D"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -906.0
-offset_top = -713.5
-offset_right = -38.0
-offset_bottom = -41.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+offset_left = -472.0
+offset_top = -378.0
+offset_right = 468.0
+offset_bottom = 419.0
+theme_override_constants/margin_left = 37
+theme_override_constants/margin_right = 37
 
-[node name="VBoxContainer" type="VBoxContainer" parent="AnimatedSprite2D/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="AnimatedSprite2D/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="AnimatedSprite2D/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="AnimatedSprite2D/MarginContainer/ScrollContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="AnimatedSprite2D/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_right = -43
+theme_override_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="AnimatedSprite2D/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("154_i0vlo")
-theme_override_font_sizes/font_size = 45
-text = "Crédits
-"
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_617xu")
+text = "Crédits"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="AnimatedSprite2D/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="AnimatedSprite2D/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="AnimatedSprite2D/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_bottom = 110
 
-[node name="Label" type="Label" parent="AnimatedSprite2D/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="AnimatedSprite2D/MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 1
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="AnimatedSprite2D/MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("154_i0vlo")
-theme_override_font_sizes/font_size = 19
-text = "Ce jeu a été réalisé par :
-     Alexandra GAUTIER, Jonathan VELIN, Jimmy CAI, Arnaud BECKER et Marwan SARGHA"
+theme_override_font_sizes/font_size = 27
+text = "Alexandra Gautier:
+- Dialogue entre les différents personnages.
+- Mouvement du personnage principal.
+- Saut de haies.
+
+Arnaud Becker:
+- Design des sprites de l'escrimeur.
+- Design du fond pour le jeu d'escrime.
+
+Jonathan Velin:
+- Design de la carte (map) et du fond pour le basket.
+
+Jimmiy Cai:
+- Mouvement du ballon de basket.
+- Système de visée.
+
+Marwan Sargha:
+- Menu principal.
+- Menu pause.
+
+Nous tenons à remercier chaleureusement toute l'équipe pour 
+sa précieuse contribution à la création de ce jeu. Nous 
+tenons également à remercier tous les intervenants qui ont 
+permis de rendre ce projet possible. 
+Merci à tous pour votre travail exceptionnel !
+
+© [2023] [ECE / ING4-SI-05/06] Tous droits réservés.
+"
 
 [node name="Button_Retour" type="Button" parent="."]
 layout_mode = 0
