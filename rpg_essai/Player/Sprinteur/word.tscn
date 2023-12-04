@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://whiwv7pu4sud"]
+[gd_scene load_steps=8 format=3 uid="uid://whiwv7pu4sud"]
 
 [ext_resource type="PackedScene" uid="uid://d1fala1vum8jy" path="res://Player/Sprinteur/runner.tscn" id="1_1kcas"]
 [ext_resource type="Script" path="res://Player/Sprinteur/word.gd" id="1_5k2vw"]
 [ext_resource type="PackedScene" uid="uid://c5ff28hir8gtr" path="res://Athle/track.tscn" id="1_wgmfn"]
 [ext_resource type="FontFile" uid="uid://dn4xs5ncttvse" path="res://Menu/Horizon.otf" id="3_emk0b"]
+[ext_resource type="AudioStream" uid="uid://dxicop7fixeme" path="res://Music_and_Sounds/athle.mp3" id="5_i111w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3dj1"]
 size = Vector2(2289, 89.5)
@@ -55,3 +56,6 @@ theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 
 [node name="Timer" type="Timer" parent="ColorRect3/RichTextLabel2"]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_i111w")

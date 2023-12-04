@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ch4pawt72s8lt"]
+[gd_scene load_steps=14 format=3 uid="uid://ch4pawt72s8lt"]
 
 [ext_resource type="Script" path="res://basketscenes/basketlevel/basketlevel.gd" id="1_tetr6"]
 [ext_resource type="PackedScene" uid="uid://cj21rqso1f3r1" path="res://basketscenes/ball/ball.tscn" id="2_0qlyt"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bm5dnu4uudr30" path="res://basketscenes/player/player.tscn" id="5_ofbgp"]
 [ext_resource type="PackedScene" uid="uid://cwnffnx8uc3ew" path="res://Menu/PauseMenu.tscn" id="6_x7kuw"]
 [ext_resource type="Script" path="res://Menu/PauseMenu_Map.gd" id="7_uege2"]
+[ext_resource type="AudioStream" uid="uid://dxicop7fixeme" path="res://Music_and_Sounds/athle.mp3" id="8_xot6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e0gd2"]
 size = Vector2(904, 63)
@@ -128,6 +129,9 @@ script = ExtResource("7_uege2")
 
 [node name="player" parent="." instance=ExtResource("5_ofbgp")]
 position = Vector2(58, 418)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_xot6y")
 
 [connection signal="area_entered" from="panier" to="panier" method="_on_area_entered"]
 [connection signal="pressed" from="CanvasLayer/ButtonShoot" to="." method="_on_button_shoot_pressed"]

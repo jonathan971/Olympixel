@@ -1,9 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdr360uags7ud"]
+[gd_scene load_steps=14 format=3 uid="uid://bdr360uags7ud"]
 
 [ext_resource type="Script" path="res://Map_Game/my_Map.gd" id="1_d3wqs"]
 [ext_resource type="PackedScene" uid="uid://b2dk658qaoo4t" path="res://Map_Game/Map.tscn" id="1_impav"]
 [ext_resource type="PackedScene" uid="uid://c03xqs6idflpu" path="res://Player/Principal/Perso_principal.tscn" id="2_5bqy1"]
 [ext_resource type="PackedScene" uid="uid://cwnffnx8uc3ew" path="res://Menu/PauseMenu.tscn" id="3_w87i4"]
+[ext_resource type="PackedScene" uid="uid://gurebrlwiocg" path="res://Player/Secondaires/athlète.tscn" id="5_d5ddx"]
+[ext_resource type="PackedScene" uid="uid://c3720og1lc224" path="res://Player/Secondaires/basketeur.tscn" id="6_epooh"]
+[ext_resource type="PackedScene" uid="uid://r1anqeb4pkfj" path="res://Player/Secondaires/detecteur.tscn" id="6_rjkto"]
+[ext_resource type="PackedScene" uid="uid://rxix6ljhnmyk" path="res://Player/Secondaires/escrimeur.tscn" id="7_ksl41"]
+[ext_resource type="Script" path="res://Player/Secondaires/detecteur.gd" id="7_nr8nb"]
+[ext_resource type="Resource" uid="uid://28loruu4mmt0" path="res://dialogue/athlète.dialogue" id="8_kvidx"]
+[ext_resource type="Resource" uid="uid://b3tkgukdvb86w" path="res://dialogue/basketeur.dialogue" id="10_61snc"]
+[ext_resource type="Resource" uid="uid://b538c4xp8221w" path="res://dialogue/escrimeur.dialogue" id="12_iaak3"]
+[ext_resource type="AudioStream" uid="uid://b6p3h2cjvei8v" path="res://Music_and_Sounds/music_principale.mp3" id="13_ym38e"]
 
 [node name="my_Map" type="Node2D"]
 script = ExtResource("1_d3wqs")
@@ -19,3 +28,36 @@ offset_left = 5.0
 offset_top = 17.0
 offset_right = 5.0
 offset_bottom = 17.0
+
+[node name="athlète" parent="." instance=ExtResource("5_d5ddx")]
+position = Vector2(317, 91)
+
+[node name="Detecteur" parent="athlète" instance=ExtResource("6_rjkto")]
+position = Vector2(0, 2)
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("7_nr8nb")
+dialogue_resource = ExtResource("8_kvidx")
+
+[node name="basketeur" parent="." instance=ExtResource("6_epooh")]
+position = Vector2(250, 195)
+
+[node name="Detecteur" parent="basketeur" instance=ExtResource("6_rjkto")]
+position = Vector2(1, -2)
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("7_nr8nb")
+dialogue_resource = ExtResource("10_61snc")
+
+[node name="escrimeur" parent="." instance=ExtResource("7_ksl41")]
+position = Vector2(389, 67)
+
+[node name="Detecteur" parent="escrimeur" instance=ExtResource("6_rjkto")]
+position = Vector2(0, -2)
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("7_nr8nb")
+dialogue_resource = ExtResource("12_iaak3")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_ym38e")

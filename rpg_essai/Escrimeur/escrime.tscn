@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://0wr4a22hgai"]
+[gd_scene load_steps=43 format=3 uid="uid://0wr4a22hgai"]
 
 [ext_resource type="Script" path="res://Escrimeur/escrime.gd" id="1_eho4m"]
 [ext_resource type="Script" path="res://Escrimeur/escrimeur.gd" id="1_s2yfs"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ndcka5nlae8q" path="res://Escrimeur/detection_escrimeur_zone.tscn" id="4_wi756"]
 [ext_resource type="PackedScene" uid="uid://cwnffnx8uc3ew" path="res://Menu/PauseMenu.tscn" id="6_0bexe"]
 [ext_resource type="Script" path="res://Menu/PauseMenu_Map.gd" id="7_ja0jc"]
+[ext_resource type="AudioStream" uid="uid://dxicop7fixeme" path="res://Music_and_Sounds/athle.mp3" id="9_6ocj4"]
 
 [sub_resource type="Animation" id="Animation_rdbq1"]
 length = 0.001
@@ -360,3 +361,6 @@ shape = SubResource("SegmentShape2D_n2u81")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="collisionAdversaire"]
 position = Vector2(359, 130)
 shape = SubResource("SegmentShape2D_qxm3q")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_6ocj4")

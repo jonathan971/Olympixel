@@ -3,9 +3,14 @@ extends CharacterBody2D
 const SPEED = 30.0
 
 @onready var perso = $AnimationPlayer
-
+@onready var actionable_finder: Area2D = $Action
 func _physics_process(delta):
 	velocity = Vector2.ZERO
+	if Input.is_action_just_pressed("ui_accept"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size()>0:
+			actionables[0].action()
+			return
 
 	if Input.is_action_pressed("ui_up"):
 		velocity.y = -SPEED

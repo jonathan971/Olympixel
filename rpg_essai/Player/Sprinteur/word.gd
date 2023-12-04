@@ -4,9 +4,10 @@ extends Node2D
 @onready var runner = $Runner
 var timer = Timer.new()
 var countdown = 2.0  # Temps d'attente entre les messages
-
+@onready var music = $Music
 
 func _ready():
+	music.play()
 	timer.wait_time = countdown
 	timer.one_shot = true
 	add_child(timer)  # Ajoutez le Timer à la scène

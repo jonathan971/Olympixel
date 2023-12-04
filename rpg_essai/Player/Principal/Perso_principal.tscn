@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c03xqs6idflpu"]
+[gd_scene load_steps=11 format=3 uid="uid://c03xqs6idflpu"]
 
 [ext_resource type="Texture2D" uid="uid://bfaekeu8unv01" path="res://Player/Principal/perso_princ_sprite_sheet.png" id="1_5vboj"]
 [ext_resource type="Script" path="res://Player/Principal/Perso_principal.gd" id="1_a33xd"]
@@ -97,6 +97,8 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6y72s"]
 size = Vector2(3, 3)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_j46tu"]
+
 [node name="Perso_principal" type="CharacterBody2D"]
 script = ExtResource("1_a33xd")
 
@@ -120,3 +122,11 @@ shape = SubResource("RectangleShape2D_6y72s")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(15, 19)
 zoom = Vector2(3, 3)
+
+[node name="Action" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Action"]
+position = Vector2(15, 18)
+shape = SubResource("CircleShape2D_j46tu")

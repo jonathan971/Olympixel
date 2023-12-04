@@ -1,6 +1,10 @@
 extends Node2D
 
 @onready var pause_menu = $Perso_principal/PauseMenu
+@onready var music = $Music
+
+func _ready():
+	music.play()
 
 var paused = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.

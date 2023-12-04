@@ -6,6 +6,8 @@ var count = 0
 var can_shoot = true
 
 @onready var pause_menu = $CanvasLayer/PauseMenu
+@onready var music = $Music
+
 var paused = false
 
 func pauseMenu():
@@ -24,6 +26,7 @@ func stopMenu():
 		Engine.time_scale = 1
 
 func _ready():
+	music.play()
 	var initial_x = $ball.position.x
 	var initial_y = $ball.position.y
 	print("initial_x : ", initial_x)

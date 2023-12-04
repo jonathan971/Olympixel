@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfqm0owjb5455"]
 
 [ext_resource type="Script" path="res://dialogue/actionable.gd" id="1_xf0kl"]
-[ext_resource type="AudioStream" uid="uid://dj1wl1s8i4kjw" path="res://Music and Sounds/button-124476.mp3" id="2_tvafb"]
+[ext_resource type="AudioStream" uid="uid://dj1wl1s8i4kjw" path="res://Music_and_Sounds/button-124476.mp3" id="2_tvafb"]
 
 [node name="Actionable" type="Area2D"]
 collision_layer = 32

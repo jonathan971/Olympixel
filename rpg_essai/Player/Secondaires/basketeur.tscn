@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3720og1lc224"]
+
+[ext_resource type="Texture2D" uid="uid://c032gk8ahcpjn" path="res://Player/Secondaires/perso_second_2.png" id="1_dyf0v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s3muq"]
+radius = 3.0
+height = 14.0
+
+[node name="basketeur" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_dyf0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_s3muq")

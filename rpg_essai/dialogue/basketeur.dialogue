@@ -1,0 +1,14 @@
+~ start
+
+Athlète : Hey you !
+- Hello
+	Athlète : Would you like to try basketball ?
+	- Yes ! Why not ?
+		Athlète : Great ! Let's have some fun.
+		set get_tree().change_scene_to_file("res://basketscenes/basketlevel/basketlevel.tscn")
+	- No, thank you.
+		Athlète: No problem. See you !
+		=> END
+- See you => END
+
+=> END

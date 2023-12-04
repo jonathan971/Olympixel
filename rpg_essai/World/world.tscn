@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bfqm0owjb5455" path="res://dialogue/actionable.tscn" id="4_wlnem"]
 [ext_resource type="Texture2D" uid="uid://dn4dbv1cjvtg8" path="res://Map/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png" id="5_31b1x"]
 [ext_resource type="Resource" uid="uid://blarrcwqvomrb" path="res://dialogue/bat.dialogue" id="5_wfuib"]
-[ext_resource type="AudioStream" uid="uid://tsd8ri2korei" path="res://Music and Sounds/background.mp3" id="7_b2ayo"]
+[ext_resource type="AudioStream" uid="uid://tsd8ri2korei" path="res://Music_and_Sounds/background.mp3" id="7_b2ayo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3oh05"]
 radius = 11.3137
