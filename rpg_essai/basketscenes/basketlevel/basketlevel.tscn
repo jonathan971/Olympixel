@@ -1,16 +1,122 @@
-[gd_scene load_steps=5 format=3 uid="uid://ch4pawt72s8lt"]
+[gd_scene load_steps=11 format=3 uid="uid://ch4pawt72s8lt"]
 
 [ext_resource type="Script" path="res://basketscenes/basketlevel/basketlevel.gd" id="1_tetr6"]
 [ext_resource type="PackedScene" uid="uid://cj21rqso1f3r1" path="res://basketscenes/ball/ball.tscn" id="2_0qlyt"]
-[ext_resource type="PackedScene" uid="uid://bm5dnu4uudr30" path="res://basketscenes/player/player.tscn" id="3_pukhw"]
-[ext_resource type="PackedScene" uid="uid://dwqd2ix2vo8xp" path="res://basketscenes/panier/panier.tscn" id="4_872by"]
+[ext_resource type="Script" path="res://basketscenes/basketlevel/panier.gd" id="5_63ast"]
+[ext_resource type="PackedScene" uid="uid://ckdaquy60wh1c" path="res://Basket/Basket.tscn" id="5_l801h"]
+[ext_resource type="PackedScene" uid="uid://bm5dnu4uudr30" path="res://basketscenes/player/player.tscn" id="5_ofbgp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0gd2"]
+size = Vector2(904, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6lm3"]
+size = Vector2(32, 596)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kdk0"]
+size = Vector2(20, 597)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iroch"]
+size = Vector2(26, 6.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwidr"]
+size = Vector2(22, 161)
 
 [node name="basketlevel" type="Node2D"]
 script = ExtResource("1_tetr6")
 
+[node name="Basket" parent="." instance=ExtResource("5_l801h")]
+scale = Vector2(0.702916, 1.01051)
+
 [node name="ball" parent="." instance=ExtResource("2_0qlyt")]
+position = Vector2(153, 407)
 
-[node name="player" parent="." instance=ExtResource("3_pukhw")]
-position = Vector2(224, 89)
+[node name="sol" type="StaticBody2D" parent="."]
 
-[node name="Panier" parent="." instance=ExtResource("4_872by")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sol"]
+position = Vector2(449, 616.5)
+shape = SubResource("RectangleShape2D_e0gd2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="sol"]
+position = Vector2(915, 298)
+shape = SubResource("RectangleShape2D_u6lm3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="sol"]
+position = Vector2(-10, 301.5)
+shape = SubResource("RectangleShape2D_5kdk0")
+
+[node name="panier" type="Area2D" parent="." groups=["panier"]]
+script = ExtResource("5_63ast")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="panier"]
+position = Vector2(785, 172.625)
+shape = SubResource("RectangleShape2D_iroch")
+
+[node name="bordpanier" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bordpanier"]
+polygon = PackedVector2Array(748, 165, 748, 178, 744, 178, 742, 175, 742, 169, 744, 167)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bordpanier"]
+position = Vector2(866, 161.5)
+shape = SubResource("RectangleShape2D_dwidr")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="bordpanier"]
+polygon = PackedVector2Array(820, 166, 820, 178, 825, 179, 853, 202, 853, 210, 855, 210, 855, 161, 852, 162, 852, 166)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameUI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="Label" parent="CanvasLayer/GameUI"]
+layout_mode = 0
+offset_right = 132.0
+offset_bottom = 29.0
+text = "Score : 00"
+
+[node name="ButtonShoot" type="Button" parent="CanvasLayer"]
+offset_left = 721.0
+offset_top = -1.0
+offset_right = 840.0
+offset_bottom = 37.0
+text = "Tirer"
+
+[node name="Angle" type="Label" parent="CanvasLayer"]
+offset_top = 32.0
+offset_right = 52.0
+offset_bottom = 58.0
+text = "Angle :"
+
+[node name="HSliderAngle" type="HSlider" parent="CanvasLayer"]
+offset_left = 65.0
+offset_top = 37.0
+offset_right = 270.0
+offset_bottom = 53.0
+max_value = 90.0
+
+[node name="Force" type="Label" parent="CanvasLayer"]
+offset_left = 1.0
+offset_top = 61.0
+offset_right = 52.0
+offset_bottom = 87.0
+text = "Force :"
+
+[node name="HSliderForce" type="HSlider" parent="CanvasLayer"]
+offset_left = 65.0
+offset_top = 66.0
+offset_right = 270.0
+offset_bottom = 85.0
+max_value = 2000.0
+
+[node name="player" parent="." instance=ExtResource("5_ofbgp")]
+position = Vector2(58, 418)
+
+[connection signal="area_entered" from="panier" to="panier" method="_on_area_entered"]
+[connection signal="pressed" from="CanvasLayer/ButtonShoot" to="." method="_on_button_shoot_pressed"]

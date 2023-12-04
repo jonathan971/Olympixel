@@ -1,20 +1,207 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm5dnu4uudr30"]
+[gd_scene load_steps=24 format=3 uid="uid://bm5dnu4uudr30"]
 
-[ext_resource type="Texture2D" uid="uid://dlpqjtddy7sm0" path="res://icon.svg" id="1_3k67c"]
 [ext_resource type="Script" path="res://basketscenes/player/player.gd" id="1_14giu"]
+[ext_resource type="Texture2D" uid="uid://bm117nli5wj12" path="res://Player/Basketballeur/basket_sprite_sheet.png" id="2_5wqm6"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qurqc"]
-size = Vector2(129, 125)
+[sub_resource type="Animation" id="Animation_hic06"]
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle"]
+}
+
+[sub_resource type="Animation" id="Animation_y2b07"]
+length = 0.875
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["tirer"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uojgl"]
+_data = {
+"idle": SubResource("Animation_hic06"),
+"tirer": SubResource("Animation_y2b07")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ux7q"]
+atlas = ExtResource("2_5wqm6")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d376"]
+atlas = ExtResource("2_5wqm6")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3ql5"]
+atlas = ExtResource("2_5wqm6")
+region = Rect2(300, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck1dh"]
+atlas = ExtResource("2_5wqm6")
+region = Rect2(600, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xcso"]
+atlas = ExtResource("2_5wqm6")
+region = Rect2(900, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbrvb"]
+atlas = ExtResource("2_5wqm6")
+region = Rect2(1200, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xaipy"]
+atlas = ExtResource("2_5wqm6")
+region = Rect2(1500, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrtfq"]
+atlas = ExtResource("2_5wqm6")
+region = Rect2(0, 300, 300, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wcmfg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ux7q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5d376")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3ql5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck1dh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xcso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbrvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xaipy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrtfq")
+}],
+"loop": true,
+"name": &"tirer",
+"speed": 8.0
+}]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_luihp"]
+animation = &"tirer"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2i3vb"]
+animation = &"tirer"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pffpy"]
+animation = &"tirer"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gf5iu"]
+animation = &"tirer"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_4colg"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_luihp")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_2i3vb")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_pffpy")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_gf5iu")
+blend_point_3/pos = Vector2(0, 1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qnvcy"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xwgg0"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_cjkop"]
+states/Start/position = Vector2(157, 100)
+states/tirer/node = SubResource("AnimationNodeBlendSpace2D_4colg")
+states/tirer/position = Vector2(454.239, 100)
+transitions = ["Start", "tirer", SubResource("AnimationNodeStateMachineTransition_qnvcy"), "tirer", "End", SubResource("AnimationNodeStateMachineTransition_xwgg0")]
+graph_offset = Vector2(-116.761, -21.8798)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnde3"]
+size = Vector2(47, 149)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_14giu")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_3k67c")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_qurqc")
+[node name="Sprite2Dplayer" type="Sprite2D" parent="."]
+position = Vector2(226, -14)
 
 [node name="Position2D" type="Marker2D" parent="."]
-position = Vector2(0, -77)
+position = Vector2(86, 5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_uojgl")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(56.5, 57)
+scale = Vector2(0.623333, 0.626667)
+sprite_frames = SubResource("SpriteFrames_wcmfg")
+animation = &"tirer"
+frame_progress = 0.25523
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_cjkop")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/tirer/blend_position = Vector2(0.00324154, -0.0655022)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(39.5, 47.5)
+shape = SubResource("RectangleShape2D_cnde3")
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

@@ -1,24 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://cj21rqso1f3r1"]
+[gd_scene load_steps=6 format=3 uid="uid://cj21rqso1f3r1"]
 
 [ext_resource type="Texture2D" uid="uid://d8km3tpvuxxa" path="res://basketscenes/basketgraphics/basket_ball.png" id="1_g67dx"]
 [ext_resource type="Script" path="res://basketscenes/ball/ball.gd" id="1_ot6w8"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bcuvu"]
-radius = 65.0077
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_82kal"]
+bounce = 0.5
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_on87u"]
-radius = 85.0235
+[sub_resource type="CircleShape2D" id="CircleShape2D_bcuvu"]
+radius = 40.5669
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bwd45"]
+radius = 49.6908
 
 [node name="ball" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_82kal")
 script = ExtResource("1_ot6w8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.92095, -2.99274)
+scale = Vector2(0.248902, 0.209689)
 texture = ExtResource("1_g67dx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -3)
+scale = Vector2(0.419858, 0.400233)
 shape = SubResource("CircleShape2D_bcuvu")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["ball"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_on87u")
+position = Vector2(-2, -4)
+scale = Vector2(0.362749, 0.379911)
+shape = SubResource("CircleShape2D_bwd45")
