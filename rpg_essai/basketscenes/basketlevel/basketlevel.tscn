@@ -48,6 +48,7 @@ position = Vector2(-9, 297)
 shape = SubResource("RectangleShape2D_5kdk0")
 
 [node name="panier" type="Area2D" parent="." groups=["panier"]]
+top_level = true
 script = ExtResource("5_63ast")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="panier"]

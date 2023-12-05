@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=3 uid="uid://6lyqw7a5fl4e"]
+[gd_scene load_steps=159 format=3 uid="uid://0urlbgddwe64"]
 
 [ext_resource type="Script" path="res://Menu/menu.gd" id="1_y48jo"]
 [ext_resource type="Texture2D" uid="uid://dx81ma8jbwppg" path="res://Menu/image/1.png" id="2_rqp2r"]
@@ -153,6 +153,7 @@
 [ext_resource type="Texture2D" uid="uid://d0qnlyli4bn1n" path="res://Menu/image/149.png" id="150_skseu"]
 [ext_resource type="Texture2D" uid="uid://bofml8gaqmreo" path="res://Menu/image/150.png" id="151_1s1mp"]
 [ext_resource type="Script" path="res://Menu/AnimatedSprite2D.gd" id="152_cxt3c"]
+[ext_resource type="AudioStream" uid="uid://cgk8lc50bvyp1" path="res://Music_and_Sounds/menu.mp3" id="154_y1fd8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqy4o"]
 animations = [{
@@ -746,6 +747,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5lrpb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_kaocf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_iki3t")
 text = "Quitter"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("154_y1fd8")
 
 [connection signal="pressed" from="AnimatedSprite2D/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Button_Jouer" to="." method="_on_button_jouer_pressed"]
 [connection signal="pressed" from="AnimatedSprite2D/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Button_Options" to="." method="_on_button_options_pressed"]

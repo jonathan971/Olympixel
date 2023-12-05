@@ -30,7 +30,7 @@ offset_right = 5.0
 offset_bottom = 17.0
 
 [node name="athlète" parent="." instance=ExtResource("5_d5ddx")]
-position = Vector2(324, 85)
+position = Vector2(317, 91)
 
 [node name="Detecteur" parent="athlète" instance=ExtResource("6_rjkto")]
 position = Vector2(0, 2)
