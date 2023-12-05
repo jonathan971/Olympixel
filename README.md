@@ -35,11 +35,11 @@ Embark on an unforgettable adventure with Olympixel, where action, competition, 
 
 ## Contributors
 
-Alexandra GAUTIER
-Jonathan VELIN
-Arnaud BECKER
-Marwan SARGHA
-Jimmy CAI
+- Alexandra GAUTIER
+- Jonathan VELIN
+- Arnaud BECKER
+- Marwan SARGHA
+- Jimmy CAI
 
 ---
 
