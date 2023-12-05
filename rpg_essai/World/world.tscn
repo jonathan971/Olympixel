@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://ch5fehu287kdp"]
+[gd_scene load_steps=10 format=3 uid="uid://ch5fehu287kdp"]
 
 [ext_resource type="Script" path="res://World/world.gd" id="1_oxskg"]
 [ext_resource type="PackedScene" uid="uid://ct6glqmmim8gg" path="res://Player/player.tscn" id="2_elfh3"]
 [ext_resource type="PackedScene" uid="uid://bvydhdix66dj2" path="res://Enemies/bat.tscn" id="3_ye1nw"]
 [ext_resource type="PackedScene" uid="uid://bfqm0owjb5455" path="res://dialogue/actionable.tscn" id="4_wlnem"]
-[ext_resource type="Texture2D" uid="uid://dn4dbv1cjvtg8" path="res://Map/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png" id="5_31b1x"]
 [ext_resource type="Resource" uid="uid://blarrcwqvomrb" path="res://dialogue/bat.dialogue" id="5_wfuib"]
 [ext_resource type="AudioStream" uid="uid://tsd8ri2korei" path="res://Music_and_Sounds/background.mp3" id="7_b2ayo"]
 
@@ -12,7 +11,6 @@
 radius = 11.3137
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fu73g"]
-texture = ExtResource("5_31b1x")
 use_texture_padding = false
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)

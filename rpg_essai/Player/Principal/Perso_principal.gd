@@ -25,5 +25,6 @@ func _physics_process(delta):
 		velocity.x = -SPEED
 		perso.play("left")
 		
+		
 
 	move_and_slide()
