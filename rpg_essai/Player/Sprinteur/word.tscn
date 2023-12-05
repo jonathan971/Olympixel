@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://whiwv7pu4sud"]
+[gd_scene load_steps=10 format=3 uid="uid://whiwv7pu4sud"]
 
 [ext_resource type="PackedScene" uid="uid://d1fala1vum8jy" path="res://Player/Sprinteur/runner.tscn" id="1_1kcas"]
 [ext_resource type="Script" path="res://Player/Sprinteur/word.gd" id="1_5k2vw"]
 [ext_resource type="PackedScene" uid="uid://c5ff28hir8gtr" path="res://Athle/track.tscn" id="1_wgmfn"]
 [ext_resource type="FontFile" uid="uid://dn4xs5ncttvse" path="res://Menu/Horizon.otf" id="3_emk0b"]
+[ext_resource type="PackedScene" uid="uid://cwnffnx8uc3ew" path="res://Menu/PauseMenu.tscn" id="4_ifwb6"]
 [ext_resource type="AudioStream" uid="uid://dxicop7fixeme" path="res://Music_and_Sounds/athle.mp3" id="5_i111w"]
+[ext_resource type="Script" path="res://Menu/PauseMenu_Map.gd" id="5_o7dml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3dj1"]
 size = Vector2(2289, 89.5)
@@ -20,6 +22,15 @@ script = ExtResource("1_5k2vw")
 [node name="Runner" parent="." instance=ExtResource("1_1kcas")]
 position = Vector2(89, 462)
 motion_mode = 0
+
+[node name="PauseMenu" parent="Runner" instance=ExtResource("4_ifwb6")]
+visible = false
+offset_left = -91.0
+offset_top = -175.0
+offset_right = -91.0
+offset_bottom = -175.0
+scale = Vector2(3.52, 3.20726)
+script = ExtResource("5_o7dml")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(163, 129)

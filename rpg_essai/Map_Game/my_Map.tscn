@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://r1anqeb4pkfj" path="res://Player/Secondaires/detecteur.tscn" id="6_rjkto"]
 [ext_resource type="PackedScene" uid="uid://rxix6ljhnmyk" path="res://Player/Secondaires/escrimeur.tscn" id="7_ksl41"]
 [ext_resource type="Script" path="res://Player/Secondaires/detecteur.gd" id="7_nr8nb"]
-[ext_resource type="Resource" uid="uid://28loruu4mmt0" path="res://dialogue/athlète.dialogue" id="8_kvidx"]
-[ext_resource type="Resource" uid="uid://b3tkgukdvb86w" path="res://dialogue/basketeur.dialogue" id="10_61snc"]
-[ext_resource type="Resource" uid="uid://b538c4xp8221w" path="res://dialogue/escrimeur.dialogue" id="12_iaak3"]
+[ext_resource type="Resource" uid="uid://c41ns2fxclepk" path="res://dialogue/athlète.dialogue" id="8_kvidx"]
+[ext_resource type="Resource" uid="uid://b3eoy1xr6dfuk" path="res://dialogue/basketeur.dialogue" id="10_61snc"]
+[ext_resource type="Resource" uid="uid://d3veba3u2jvrl" path="res://dialogue/escrimeur.dialogue" id="12_iaak3"]
 [ext_resource type="AudioStream" uid="uid://b6p3h2cjvei8v" path="res://Music_and_Sounds/music_principale.mp3" id="13_ym38e"]
 
 [node name="my_Map" type="Node2D"]

@@ -6,6 +6,14 @@ var timer = Timer.new()
 var countdown = 2.0  # Temps d'attente entre les messages
 @onready var music = $Music
 
+@onready var pause_menu = $Runner/PauseMenu
+
+var paused = false
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if  Input.is_action_just_pressed("pause"):
+		pauseMenu()
+
 func _ready():
 	music.play()
 	timer.wait_time = countdown
@@ -34,3 +42,17 @@ func start_your_race_timer():
 	label.hide()
 	$ColorRect3.hide()
 
+func pauseMenu():
+	if paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
+	else :
+		pause_menu.show()
+		Engine.time_scale = 0
+	
+	paused = !paused
+	
+func stopMenu():
+	if paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
