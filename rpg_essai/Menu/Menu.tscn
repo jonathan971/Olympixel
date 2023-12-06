@@ -153,7 +153,7 @@
 [ext_resource type="Texture2D" uid="uid://d0qnlyli4bn1n" path="res://Menu/image/149.png" id="150_skseu"]
 [ext_resource type="Texture2D" uid="uid://bofml8gaqmreo" path="res://Menu/image/150.png" id="151_1s1mp"]
 [ext_resource type="Script" path="res://Menu/AnimatedSprite2D.gd" id="152_cxt3c"]
-[ext_resource type="AudioStream" uid="uid://cgk8lc50bvyp1" path="res://Music_and_Sounds/menu.mp3" id="154_7vraq"]
+[ext_resource type="AudioStream" uid="uid://dvtbqcesimcxl" path="res://Music_and_Sounds/menu.mp3" id="154_7vraq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqy4o"]
 animations = [{

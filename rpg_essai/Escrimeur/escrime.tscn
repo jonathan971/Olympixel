@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Escrimeur/escrime.gd" id="1_eho4m"]
 [ext_resource type="Script" path="res://Escrimeur/escrimeur.gd" id="1_s2yfs"]
 [ext_resource type="Texture2D" uid="uid://bfxwt1std640w" path="res://Escrimeur/escrimeur_sprite_sheet.png" id="2_xesfo"]
-[ext_resource type="Texture2D" uid="uid://x2w7djg3k6xn" path="res://World/escrime.png" id="3_1jh2a"]
 [ext_resource type="Script" path="res://Escrimeur/escrimeur2.gd" id="3_a1jct"]
 [ext_resource type="PackedScene" uid="uid://ndcka5nlae8q" path="res://Escrimeur/detection_escrimeur_zone.tscn" id="4_wi756"]
 [ext_resource type="PackedScene" uid="uid://cwnffnx8uc3ew" path="res://Menu/PauseMenu.tscn" id="6_0bexe"]
+[ext_resource type="Texture2D" uid="uid://dap24uq6wma34" path="res://Escrimeur/escrime.png" id="6_ggs50"]
 [ext_resource type="Script" path="res://Menu/PauseMenu_Map.gd" id="7_ja0jc"]
 [ext_resource type="AudioStream" uid="uid://dxicop7fixeme" path="res://Music_and_Sounds/athle.mp3" id="9_6ocj4"]
 
@@ -325,7 +325,7 @@ offset_left = -20.0
 offset_top = -37.0
 offset_right = 392.0
 offset_bottom = 177.0
-texture = ExtResource("3_1jh2a")
+texture = ExtResource("6_ggs50")
 expand_mode = 2
 metadata/_edit_use_anchors_ = true
 
