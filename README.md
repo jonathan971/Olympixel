@@ -6,6 +6,9 @@ Olympixel is a 2D RPG game developed using Godot, inspired by the 2024 Olympic G
 
 Embark on an unforgettable adventure with Olympixel, where action, competition, and entertainment come together to create a captivating gaming experience. And don't forget to bring your water bottle because you're about to embark on an exciting sports adventure!
 
+## Presentation video
+Link to see our short presentation video is [here](https://drive.google.com/file/d/121nHMEJbYISFgHmVMj8rOpj6moUMEqro/view?usp=sharing)
+
 ## Getting Started
 
 1. **Download the Game:**
